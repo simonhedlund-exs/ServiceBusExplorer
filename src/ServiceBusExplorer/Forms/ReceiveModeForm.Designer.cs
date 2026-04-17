@@ -266,11 +266,11 @@ namespace ServiceBusExplorer.Forms
             this.txtMessageCount.Name = "txtMessageCount";
             this.txtMessageCount.Size = new System.Drawing.Size(80, 20);
             this.txtMessageCount.TabIndex = 42;
+            this.txtMessageCount.Enabled = false;
             // 
             // btnTop
             // 
             this.btnTop.AutoSize = true;
-            this.btnTop.Checked = true;
             this.btnTop.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTop.Location = new System.Drawing.Point(64, 32);
             this.btnTop.Name = "btnTop";
@@ -284,7 +284,8 @@ namespace ServiceBusExplorer.Forms
             // btnAll
             // 
             this.btnAll.AutoSize = true;
-            this.btnAll.Enabled = false;
+            this.btnAll.Checked = true;
+            this.btnAll.Enabled = true;
             this.btnAll.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAll.Location = new System.Drawing.Point(16, 32);
             this.btnAll.Name = "btnAll";

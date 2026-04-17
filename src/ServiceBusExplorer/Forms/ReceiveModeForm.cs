@@ -153,13 +153,6 @@ namespace ServiceBusExplorer.Forms
 
         private void receiveMode_CheckedChanged(object sender, EventArgs e)
         {
-            btnAll.Enabled = btnReceive.Checked;
-            
-            if (btnPeek.Checked)
-            {
-                btnTop.Checked = true;
-            }
-
             txtFromSequenceNumber.Enabled = btnPeek.Checked;
         }
         
