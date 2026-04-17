@@ -1,0 +1,23 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: dotnet publish src\ServiceBusExplorer\ServiceBusExplorer.csproj -c Release
+
+      - name: Zip output
+        run: Compress-Archive -Path src\ServiceBusExplorer\bin\Release\* -DestinationPath ServiceBusExplorer.zip
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ServiceBusExplorer.zip
